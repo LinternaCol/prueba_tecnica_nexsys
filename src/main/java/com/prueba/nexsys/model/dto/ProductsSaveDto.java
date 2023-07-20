@@ -3,6 +3,13 @@ package com.prueba.nexsys.model.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+/**
+ * Esta es una clase Dto
+ *
+ * @author juan_suarez
+ * @version 1.0
+ */
 @Data
 @NoArgsConstructor
 public class ProductsSaveDto {

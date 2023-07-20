@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+/**
+ * Esta es una clase Controller para maenejo de las categorias
+ *
+ * @author juan_suarez
+ * @version 1.0
+ */
 @RestController
 @RequestMapping("/nexsys/v1/")
 public class CategriesController {

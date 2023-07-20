@@ -17,6 +17,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+/**
+ * Esta es una clase Service implementacion para maenejo de los productos
+ *
+ * @author juan_suarez
+ * @version 1.0
+ */
 @Service
 public class ProductsServiceImpl implements ProductsService {
 
@@ -64,6 +71,11 @@ public class ProductsServiceImpl implements ProductsService {
                 .toList();
     }
 
+    /**
+     * Metodo para tranformacion de  ProductsAnswerDto a ProductsRequestDto
+     * @param product Dto a convertir
+     * @return dto producto tranformado
+     */
     private ProductsRequestDto mapToProductsRequestDto(ProductsSaveDto product) {
         return new ProductsRequestDto(
                 product.getName(),
@@ -74,6 +86,11 @@ public class ProductsServiceImpl implements ProductsService {
     }
 
 
+    /**
+     * Metodo para guardar un producto
+     * @param productsAnswerDto Dto que contiene la informacion necesaria para peticion
+     * @return id paciente guardado
+     */
     @Override
     public ProductsAnswerSaveDto saveProduct(ProductsSaveDto productsAnswerDto) {
         ProductsAnswerSaveDto productsAnswerDtoResult= new ProductsAnswerSaveDto();
@@ -89,6 +106,12 @@ public class ProductsServiceImpl implements ProductsService {
 
         return productsAnswerDtoResult;
     }
+
+    /**
+     * Metodo para llamar el servicio de plazti y hacer el guardado
+     * @param productsRequestDto  Dto que contiene la informacion necesaria para peticion
+     * @return repuesta del servicio de Platzi
+     */
     public ProductsRequestDto  saveProductPlatzi(ProductsRequestDto productsRequestDto){
         String productsUrl = getRoutePlatzi + "products";
         RestTemplate restTemplate = new RestTemplate();

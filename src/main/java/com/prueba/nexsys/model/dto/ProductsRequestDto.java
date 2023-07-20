@@ -7,6 +7,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Esta es una clase Dto
+ *
+ * @author juan_suarez
+ * @version 1.0
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @NoArgsConstructor

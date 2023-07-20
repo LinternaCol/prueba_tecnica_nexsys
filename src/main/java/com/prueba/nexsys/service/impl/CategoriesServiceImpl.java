@@ -13,6 +13,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+/**
+ * Esta es una clase Service implementacion para maenejo de las categorias
+ *
+ * @author juan_suarez
+ * @version 1.0
+ */
 @Service
 public class CategoriesServiceImpl implements CategoriesService {
 
