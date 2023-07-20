@@ -2,9 +2,10 @@ package com.prueba.nexsys.model.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -19,6 +20,10 @@ public class ProductsRequestDto {
 
     private  String description;
 
+    private int categoryId;
+
+    List<String> images;
+
     public ProductsRequestDto( int id, String title, Double price, String description) {
         this.id = id;
         this.title = title;
@@ -26,7 +31,11 @@ public class ProductsRequestDto {
         this.description=description;
     }
 
-
-
-
+    public ProductsRequestDto(String title, Double price, String description, int categoryId, List<String> images) {
+        this.title = title;
+        this.price = price;
+        this.description = description;
+        this.categoryId = categoryId;
+        this.images = images;
+    }
 }
